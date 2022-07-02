@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+.container {
+	display: flex;
+	gap: 5%;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-example,
+.video-example,
+.image-example {
+	height: 70vh;
+	width: 20vw;
+	border: 5px solid #131313;
+	cursor: pointer;
+	box-shadow: inset 5px 5px 15px rgb(0 0 0 / 45%),
+		inset -5px -5px 15px rgb(225 255 255 / 15%),
+		5px 5px 15px rgb(0 0 0 / 30%), -5px -5px 15px rgb(225 255 255 / 15%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-example,
+.video-example {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+	font-size: 55px;
+	font-weight: 700;
+	font-family: 'Trispace', sans-serif;
+	background: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-example span,
+.video-example span {
+	color: #000000;
+	display: inline-block;
+	z-index: 10;
 }
 
-.App-link {
-  color: #61dafb;
+.-media {
+	z-index: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.-exclusion .mf-cursor-text {
+	color: currentColor;
+}
+
+.-exclusion.-media {
+	filter: invert(1);
+}
+
+.-exclusion {
+	z-index: 11;
+}
+
+.image-example img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.-purple {
+	color: #8000807f;
+}
+
+.mf-cursor-text {
+	font-family: 'Splash', cursive;
+}
+
+.follow-container {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.follow-me {
+	color: #000000;
+	font-family: 'Splash', cursive;
+	font-size: 1.1rem;
+	z-index: 10;
+}
+
+.-me::before,
+.mf-cursor.-pointer::before {
+	transform: scale(1.9);
 }
