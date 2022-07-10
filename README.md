@@ -1,1 +1,1 @@
-GSAP <a href="https://cuberto.com/">Cuberto</a> example
+GSAP <a href="https://cuberto.com/" target="_blank">Cuberto</a> example

@@ -5,9 +5,15 @@
 	align-items: center;
 }
 
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+	.container {
+		flex-direction: column;
+		padding: 30px 0;
+	}
+}
+
 .text-example,
-.video-example,
-.image-example {
+.video-example {
 	height: 70vh;
 	width: 20vw;
 	border: 5px solid #131313;
@@ -15,6 +21,33 @@
 	box-shadow: inset 5px 5px 15px rgb(0 0 0 / 45%),
 		inset -5px -5px 15px rgb(225 255 255 / 15%),
 		5px 5px 15px rgb(0 0 0 / 30%), -5px -5px 15px rgb(225 255 255 / 15%);
+}
+
+.image-example {
+	position: relative;
+	height: 70vh;
+	width: 20vw;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+	.image-example {
+		min-height: 25%;
+	}
+}
+
+.lol {
+	width: 100%;
+	height: 100%;
+	border: 5px solid #131313;
+	box-shadow: inset 5px 5px 15px rgb(0 0 0 / 45%),
+		inset -5px -5px 15px rgb(225 255 255 / 15%),
+		5px 5px 15px rgb(0 0 0 / 30%), -5px -5px 15px rgb(225 255 255 / 15%);
+	filter: url(#noise);
+}
+
+.image-example svg {
+	position: absolute;
 }
 
 .text-example,
@@ -29,6 +62,13 @@
 	font-weight: 700;
 	font-family: 'Trispace', sans-serif;
 	background: #ffffff;
+}
+
+@media screen and (max-width: 998px) {
+	.text-example,
+	.video-example {
+		font-size: 32px;
+	}
 }
 
 .text-example span,
@@ -54,10 +94,10 @@
 	z-index: 11;
 }
 
-.image-example img {
+.lol img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: fill;
 }
 
 .-purple {
