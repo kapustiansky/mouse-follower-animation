@@ -205,7 +205,7 @@ const App: FC = () => {
 				className='follow-container'
 				data-cursor-stick='.follow-me'
 				data-cursor='-me -exclusion'>
-				<a href='https://kapustiansky.tk/' className='follow-me'>
+				<a href='https://webdew.me/' className='follow-me'>
 					my
 				</a>
 			</div>
